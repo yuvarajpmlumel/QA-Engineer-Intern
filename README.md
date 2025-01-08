@@ -1,1 +1,1 @@
-"Started learning JS on www.freecodecamp.org with completion of 12%" 
+"Started learning JS on www.freecodecamp.org with completion of 20%" 
