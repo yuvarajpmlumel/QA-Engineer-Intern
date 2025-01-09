@@ -1,0 +1,33 @@
+The strict inequality operator (!==) is the logical opposite of the strict equality operator. It means "Strictly Not Equal" and returns false where strict equality would return true and vice versa. The strict inequality operator will not convert data types.
+
+Examples
+
+3 !==  3  // false
+3 !== '3' // true
+4 !==  3  // true
+---------------------------------------------------------------------
+!= -> data type, value
+!== -> only value
+---------------------------------------------------------------------
+== vs !=
+=== vs !==
+&& - Logical And
+---------------------------------------------------------------------
+Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through what are called properties. here using dot and bracket instead of index
+
+You can even omit the quotes for single-word string properties, as follows:
+
+const anotherObject = {
+  make: "Ford",
+  5: "five",
+  "model": "focus"
+};
+
+However, if your object has any non-string properties, JavaScript will automatically typecast them as strings.
+---------------------------------------------------------------------
+We can also delete properties from objects like this:
+
+delete ourDog.bark;
+
+---------------------------------------------------------------------
+To check if a property on a given object exists or not, you can use the .hasOwnProperty() method. someObject.hasOwnProperty(someProperty) returns true or false depending on if the property is found on the object or not.
