@@ -1,1 +1,1 @@
-"Attended InfoSec Session"
+"Completed InfoSec Traning"
