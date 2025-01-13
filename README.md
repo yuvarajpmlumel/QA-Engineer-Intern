@@ -1,1 +1,1 @@
-"Completed InfoSec Traning"
+"PowerBI progress with completion of 59%"
