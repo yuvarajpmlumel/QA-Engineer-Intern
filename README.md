@@ -1,1 +1,1 @@
-"PowerBI Course completed succcessfully"
+"Solved JS Problems and learned inforiver "
