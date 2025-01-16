@@ -1,1 +1,1 @@
-"Created matrix report & done automation using playwright"
+"Completed the Blog Site automation with the given test scenario "
