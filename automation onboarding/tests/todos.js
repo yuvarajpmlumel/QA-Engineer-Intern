@@ -1,0 +1,71 @@
+Feature("To-do")
+
+Scenario("Adding Task", async ({I})=> {
+    I.amOnPage("https://todomvc.com/examples/react/dist/")
+    I.fillField("//input[@type='text']","Drink Water Every Hour")
+    I.pressKey("Enter")
+    I.fillField("//input[@type='text']","Exercise Daily")
+    I.pressKey("Enter")
+    I.fillField("//input[@type='text']","Clean the House")
+    I.pressKey("Enter")
+    I.fillField("//input[@type='text']","Meditate Daily")
+    I.pressKey("Enter")
+    I.click("All")
+    I.see("4 items left!")
+})
+Scenario("Mark Completed", async ({I})=> {
+    I.amOnPage("https://todomvc.com/examples/react/dist/")
+    I.fillField("//input[@type='text']","Drink Water Every Hour")
+    I.pressKey("Enter")
+    I.fillField("//input[@type='text']","Exercise Daily")
+    I.pressKey("Enter")
+    I.fillField("//input[@type='text']","Clean the House")
+    I.pressKey("Enter")
+    I.fillField("//input[@type='text']","Meditate Daily")
+    I.pressKey("Enter")
+    I.checkOption('.todo-list li:nth-child(1) .toggle');
+    I.checkOption('.todo-list li:nth-child(2) .toggle');  
+    I.click("All")
+    I.see("2 items left!")
+})
+Scenario("Delete Completed", async ({I})=> {
+    I.amOnPage("https://todomvc.com/examples/react/dist/")
+    I.fillField("//input[@type='text']","Drink Water Every Hour")
+    I.pressKey("Enter")
+    I.fillField("//input[@type='text']","Exercise Daily")
+    I.pressKey("Enter")
+    I.fillField("//input[@type='text']","Clean the House")
+    I.pressKey("Enter")
+    I.fillField("//input[@type='text']","Meditate Daily")
+    I.pressKey("Enter")
+    I.checkOption('.todo-list li:nth-child(1) .toggle');
+    I.checkOption('.todo-list li:nth-child(2) .toggle'); 
+    I.moveCursorTo('.todo-list li:nth-child(3)');
+    I.click(".todo-list li:nth-child(3) .destroy")
+    I.click("All")
+    I.see("1 item left!")
+})
+Scenario("Filtering", async ({I})=> {
+    I.amOnPage("https://todomvc.com/examples/react/dist/")
+    I.fillField("//input[@type='text']","Drink Water Every Hour")
+    I.pressKey("Enter")
+    I.fillField("//input[@type='text']","Exercise Daily")
+    I.pressKey("Enter")
+    I.fillField("//input[@type='text']","Clean the House")
+    I.pressKey("Enter")
+    I.fillField("//input[@type='text']","Meditate Daily")
+    I.pressKey("Enter")
+    I.checkOption('.todo-list li:nth-child(1) .toggle');
+    I.checkOption('.todo-list li:nth-child(2) .toggle'); 
+    I.moveCursorTo('.todo-list li:nth-child(3)');
+    I.click(".todo-list li:nth-child(3) .destroy")
+    I.click("Active")
+    I.see("Meditate Daily")
+    I.dontSee("Drink Water Every Hour")
+    I.dontSee("Exercise Daily")
+    I.click("Completed")
+    I.see("Drink Water Every Hour")
+    I.see("Exercise Daily")
+    I.dontSee("Meditate Daily")
+    I.see("1 item left!")
+})

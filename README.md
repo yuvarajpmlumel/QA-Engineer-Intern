@@ -1,1 +1,1 @@
-"Completed the Blog Site automation with the given test scenario "
+"Installed framework , learnt codeceptjs from documentation and automated the todos site "
