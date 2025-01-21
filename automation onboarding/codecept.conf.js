@@ -10,13 +10,13 @@ setCommonPlugins();
 
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
-  tests: './tests/todos.js',
+  tests: ['./tests/LoginTest.js','./tests/dashboardTest.js'],
   output: './output',
   helpers: {
     Playwright: {
       browser: 'chromium',
-      url: 'https://demo.automationtesting.in/',
-      show: false,
+      url: 'https://opensource-demo.orangehrmlive.com/web/index.php/auth',
+      show: true,
       chromium : { headless : false},
       waitForTimeout: 60000,
       waitForNavigation: "networkidle0"
