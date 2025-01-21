@@ -16,7 +16,7 @@ exports.config = {
     Playwright: {
       browser: 'chromium',
       url: 'https://demo.automationtesting.in/',
-      show: true,
+      show: false,
       chromium : { headless : false},
       waitForTimeout: 60000,
       waitForNavigation: "networkidle0"
