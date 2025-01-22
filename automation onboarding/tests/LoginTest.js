@@ -1,10 +1,7 @@
-const loginPage = require('../pages/login');
+const LoginAction = require('../Components/LoginAction');
 require("dotenv").config()
 Feature("Login")
 Scenario("Logging In", async({I})=>{
     await I.amOnPage('/login')
-    await loginPage.TextLogin()
-    await loginPage.enterUsername(process.env.username);
-    await loginPage.enterPassword(process.env.password);
-    await loginPage.clickLogin();
+    await LoginAction.login()
 })

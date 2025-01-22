@@ -1,1 +1,1 @@
-"Installed framework , learnt codeceptjs from documentation and automated the todos site "
+"Automated the orangeHRM with Page Object MODEL"
