@@ -5,7 +5,7 @@ module.exports =  {
     PendingSelf : `//p[text()='(1) Pending Self Review']`,
     CandidateToInterview : `//p[text()='(1) Candidate to Interview']`,
     PunchedOut : `//p[text()='Punched Out']`,
-    
+    LeaveOnNav : `//span[text()='Leave']`,
     async isTimesheetApproveVisible(){
         await I.seeElement(this.TimesheetApprove)
     },
@@ -20,5 +20,10 @@ module.exports =  {
     async isPunchedOutVisible(){
         await I.waitForElement(this.PunchedOut)
         await I.seeElement(this.PunchedOut)
+        },
+    async toLeavePage(){
+        await I.click(this.LeaveOnNav);
+        // await I.waitForNavigation(); 
         }
+
   }
