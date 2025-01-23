@@ -23,7 +23,6 @@ module.exports =  {
         },
     async toLeavePage(){
         await I.click(this.LeaveOnNav);
-        // await I.waitForNavigation(); 
         }
 
   }

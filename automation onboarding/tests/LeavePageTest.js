@@ -8,7 +8,9 @@ Scenario("Checking Dashboard", async({I})=>{
     await LoginAction.login()
     await dashboardPage.toLeavePage()
     await LeavePage.enterFromDate('2024-01-01')
-    await LeavePage.enterToDate('2025-01-01')
+    await LeavePage.enterToDate('2024-31-12')
+    await LeavePage.SelectTaken()
     await LeavePage.clickSubmit()
+    await LeavePage.isResultsVisible()
 
 })
